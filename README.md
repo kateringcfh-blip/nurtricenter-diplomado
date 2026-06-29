@@ -148,6 +148,8 @@ classDiagram
 
 ## Decisiones de Diseño
 
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/4gfZ4JAR)
+
 ### IDs como Value Objects tipados
 
 Cada agregado y entidad tiene su propio tipo de ID (`OrdenId`, `PaqueteId`, `ItemOrdenId`, `PorcionId`) en vez de usar `Guid` directamente. Esto previene errores de asignación cruzada que el compilador no detectaría con `Guid` plano — pasar un `PaqueteId` donde se espera un `OrdenId` es un error en tiempo de compilación, no en tiempo de ejecución. Todos siguen el mismo patrón: constructor privado, `Crear()` para instancias nuevas, `De(guid)` para reconstruir desde persistencia, con validación de `Guid.Empty` en ambos casos.
