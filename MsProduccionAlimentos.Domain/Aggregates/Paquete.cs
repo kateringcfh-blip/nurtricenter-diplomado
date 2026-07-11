@@ -16,6 +16,8 @@ public class Paquete
     public EstadoPaquete Estado { get; private set; }
     public IReadOnlyList<Porcion> Porciones => _porciones.AsReadOnly();
 
+    private Paquete() { Etiqueta = null!; }  // EF Core
+
     private Paquete(PaqueteId id, Guid pacienteId, OrdenId ordenId, Etiqueta etiqueta, DateOnly fecha)
     {
         Id = id;

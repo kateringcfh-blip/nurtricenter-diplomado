@@ -9,6 +9,8 @@ public class ItemOrden
     public int CantidadRequerida { get; }
     public int CantidadPreparada { get; private set; }
 
+    private ItemOrden() { }  // EF Core
+
     private ItemOrden(ItemOrdenId id, Guid recetaId, int cantidadRequerida)
     {
         Id = id;

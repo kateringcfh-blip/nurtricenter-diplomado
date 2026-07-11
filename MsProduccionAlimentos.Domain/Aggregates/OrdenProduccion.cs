@@ -18,6 +18,8 @@ public class OrdenProduccion
     public IReadOnlyList<ItemOrden> Items => _items.AsReadOnly();
     public IReadOnlyList<IDomainEvent> EventosOcurridos => _eventos.AsReadOnly();
 
+    private OrdenProduccion() { LoteProduccion = null!; }  // EF Core
+
     private OrdenProduccion(OrdenId id, DateOnly fecha, Guid encargadoCocinaId, string loteProduccion)
     {
         Id = id;

@@ -6,6 +6,8 @@ public sealed record Etiqueta
     public string DireccionEntrega { get; }
     public string NumeroId { get; }
 
+    private Etiqueta() { NombrePaciente = null!; DireccionEntrega = null!; NumeroId = null!; }  // EF Core
+
     private Etiqueta(string nombrePaciente, string direccionEntrega, string numeroId)
     {
         NombrePaciente = nombrePaciente;

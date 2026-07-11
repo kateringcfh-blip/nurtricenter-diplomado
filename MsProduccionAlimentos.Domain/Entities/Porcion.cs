@@ -9,6 +9,8 @@ public class Porcion
     public decimal Cantidad { get; }
     public bool EstaEnvasada { get; private set; }
 
+    private Porcion() { }  // EF Core
+
     private Porcion(PorcionId id, Guid recetaId, decimal cantidad)
     {
         Id = id;
