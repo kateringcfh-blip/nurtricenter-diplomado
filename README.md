@@ -1,6 +1,56 @@
 # NurTricenter — ms-produccion-alimentos
 
-Capa de Dominio del microservicio `ms-produccion-alimentos`, implementada en C# (.NET 8) siguiendo **Domain-Driven Design (DDD)** y **Clean Architecture**.
+---
+
+## Descripción del Microservicio
+
+`ms-produccion-alimentos` es el microservicio responsable de gestionar la **producción de alimentos y el armado de paquetes** dentro del sistema NurTricenter.
+
+A partir de los planes alimentarios contratados por los pacientes (que provienen del microservicio `ms-catering`), este microservicio genera **Órdenes de Producción** que los encargados de cocina utilizan para preparar las recetas requeridas. Una vez completada la preparación, los alimentos se envasan y se arman **Paquetes etiquetados** por paciente, listos para ser entregados al microservicio de logística (`ms-logistica-entrega`).
+
+### Endpoints disponibles
+
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| `POST` | `/api/ordenes` | Genera una nueva orden de producción con sus ítems de recetas |
+| `GET` | `/api/ordenes` | Lista todas las órdenes de producción |
+| `GET` | `/api/ordenes/{id}` | Obtiene el detalle de una orden por su Id |
+| `POST` | `/api/ordenes/{id}/cancelar` | Cancela una orden indicando un motivo |
+| `POST` | `/api/paquetes` | Arma un paquete etiquetado para un paciente vinculado a una orden |
+| `GET` | `/api/paquetes/{id}` | Obtiene el detalle de un paquete por su Id |
+| `POST` | `/api/paquetes/{id}/entregar` | Marca el paquete como listo y lo entrega a logística |
+
+### Tecnologías y patrones
+
+- **Domain-Driven Design (DDD):** Aggregate Roots, Entities, Value Objects, Domain Events
+- **Clean Architecture:** capas Domain → Application → Infrastructure → Api, sin dependencias invertidas
+- **CQRS con MediatR:** Commands para escritura, Queries para lectura, sin acoplamiento entre capas
+- **Entity Framework Core 8** con SQL Server / LocalDB para persistencia
+- **Value Objects tipados** para IDs (`OrdenId`, `PaqueteId`, etc.) con validación en construcción
+- **Owned Entities** de EF Core para mapear `Etiqueta`, `ItemOrden` y `Porcion` sin tablas de join innecesarias
+
+---
+
+## Cómo ejecutar
+
+### Requisitos
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8)
+- SQL Server LocalDB (incluido con Visual Studio) o SQL Server Express
+
+### Aplicar migraciones (crea la base de datos)
+
+```bash
+dotnet ef database update --project MsProduccionAlimentos.Infrastructure --startup-project MsProduccionAlimentos.Api
+```
+
+### Correr la API
+
+```bash
+dotnet run --project MsProduccionAlimentos.Api
+```
+
+La API quedará disponible en `http://localhost:5234` y Swagger UI en `http://localhost:5234/swagger`.
 
 ---
 
