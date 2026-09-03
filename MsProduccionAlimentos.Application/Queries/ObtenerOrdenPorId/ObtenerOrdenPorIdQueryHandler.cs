@@ -1,31 +1,33 @@
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using MsProduccionAlimentos.Application.DTOs;
 using MsProduccionAlimentos.Application.Interfaces;
-using MsProduccionAlimentos.Domain.Aggregates;
 using MsProduccionAlimentos.Domain.ValueObjects;
 
 namespace MsProduccionAlimentos.Application.Queries.ObtenerOrdenPorId;
 
 public class ObtenerOrdenPorIdQueryHandler : IRequestHandler<ObtenerOrdenPorIdQuery, OrdenDto?>
 {
-    private readonly IOrdenRepository _repository;
+    private readonly INurTricenterDbContext _context;
 
-    public ObtenerOrdenPorIdQueryHandler(IOrdenRepository repository)
+    public ObtenerOrdenPorIdQueryHandler(INurTricenterDbContext context)
     {
-        _repository = repository;
+        _context = context;
     }
 
     public async Task<OrdenDto?> Handle(ObtenerOrdenPorIdQuery request, CancellationToken cancellationToken)
     {
-        var orden = await _repository.ObtenerPorId(OrdenId.De(request.OrdenId));
-        return orden is null ? null : MapearADto(orden);
-    }
+        var ordenId = OrdenId.De(request.OrdenId);
 
-    private static OrdenDto MapearADto(OrdenProduccion orden) => new(
-        Id: orden.Id.Valor,
-        Fecha: orden.Fecha,
-        Estado: orden.Estado.ToString(),
-        LoteProduccion: orden.LoteProduccion,
-        TotalItems: orden.Items.Count,
-        ItemsCompletos: orden.Items.Count(i => i.EstaCompleto()));
+        return await _context.OrdenesProd
+            .Where(o => o.Id == ordenId)
+            .Select(o => new OrdenDto(
+                o.Id.Valor,
+                o.Fecha,
+                o.Estado.ToString(),
+                o.LoteProduccion,
+                o.Items.Count,
+                o.Items.Count(i => i.CantidadPreparada >= i.CantidadRequerida)))
+            .FirstOrDefaultAsync(cancellationToken);
+    }
 }

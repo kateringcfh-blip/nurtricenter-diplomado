@@ -1,0 +1,50 @@
+Summary
+  Generated on: 31/08/2026 - 08:49:48 p. m.
+  Coverage date: 31/08/2026 - 08:49:19 p. m.
+  Parser: Cobertura
+  Assemblies: 2
+  Classes: 26
+  Files: 26
+  Line coverage: 41.1%
+  Covered lines: 149
+  Uncovered lines: 213
+  Coverable lines: 362
+  Total lines: 634
+  Branch coverage: 39% (25 of 64)
+  Covered branches: 25
+  Total branches: 64
+  Method coverage: 39% (57 of 146)
+  Full method coverage: 37.6% (55 of 146)
+  Covered methods: 57
+  Fully covered methods: 55
+  Total methods: 146
+
+MsPacientesEvaluacion.Application                                                                                 0%
+  MsPacientesEvaluacion.Application.Commands.AsignarNutricionista.AsignarNutricionistaCommand                     0%
+  MsPacientesEvaluacion.Application.Commands.AsignarNutricionista.AsignarNutricionistaCommandHandler              0%
+  MsPacientesEvaluacion.Application.Commands.DesactivarPaciente.DesactivarPacienteCommand                         0%
+  MsPacientesEvaluacion.Application.Commands.DesactivarPaciente.DesactivarPacienteCommandHandler                  0%
+  MsPacientesEvaluacion.Application.Commands.RegistrarConsultaInicial.RegistrarConsultaInicialCommand             0%
+  MsPacientesEvaluacion.Application.Commands.RegistrarConsultaInicial.RegistrarConsultaInicialCommandHandler      0%
+  MsPacientesEvaluacion.Application.Commands.RegistrarEvaluacion.RegistrarEvaluacionCommand                       0%
+  MsPacientesEvaluacion.Application.Commands.RegistrarEvaluacion.RegistrarEvaluacionCommandHandler                0%
+  MsPacientesEvaluacion.Application.Commands.RegistrarPaciente.RegistrarPacienteCommand                           0%
+  MsPacientesEvaluacion.Application.Commands.RegistrarPaciente.RegistrarPacienteCommandHandler                    0%
+  MsPacientesEvaluacion.Application.DTOs.PacienteDetalleDto                                                       0%
+  MsPacientesEvaluacion.Application.DTOs.PacienteDto                                                              0%
+  MsPacientesEvaluacion.Application.Queries.ListarPacientes.ListarPacientesQueryHandler                           0%
+  MsPacientesEvaluacion.Application.Queries.ObtenerPacientePorId.ObtenerPacientePorIdQuery                        0%
+  MsPacientesEvaluacion.Application.Queries.ObtenerPacientePorId.ObtenerPacientePorIdQueryHandler                 0%
+
+MsPacientesEvaluacion.Domain                                                                                   72.3%
+  MsPacientesEvaluacion.Domain.Aggregates.Paciente                                                             79.6%
+  MsPacientesEvaluacion.Domain.Entities.Anamnesis                                                              62.9%
+  MsPacientesEvaluacion.Domain.Entities.ConsultaInicial                                                        86.9%
+  MsPacientesEvaluacion.Domain.Entities.EvaluacionSeguimiento                                                  90.6%
+  MsPacientesEvaluacion.Domain.Events.PacienteRegistrado                                                         60%
+  MsPacientesEvaluacion.Domain.ValueObjects.AnamnesisId                                                        28.5%
+  MsPacientesEvaluacion.Domain.ValueObjects.ConsultaId                                                         28.5%
+  MsPacientesEvaluacion.Domain.ValueObjects.DatosContacto                                                      81.2%
+  MsPacientesEvaluacion.Domain.ValueObjects.EvaluacionId                                                       28.5%
+  MsPacientesEvaluacion.Domain.ValueObjects.Medidas                                                              75%
+  MsPacientesEvaluacion.Domain.ValueObjects.PacienteId                                                         28.5%

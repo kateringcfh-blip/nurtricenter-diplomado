@@ -24,6 +24,4 @@ public class OrdenRepository : IOrdenRepository
     public async Task<List<OrdenProduccion>> ObtenerTodos()
         => await _context.OrdenesProd.ToListAsync();
 
-    public async Task GuardarCambios()
-        => await _context.SaveChangesAsync();
 }

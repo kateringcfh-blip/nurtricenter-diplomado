@@ -1,0 +1,61 @@
+Summary
+  Generated on: 31/08/2026 - 08:49:48 p. m.
+  Coverage date: 31/08/2026 - 08:49:19 p. m.
+  Parser: Cobertura
+  Assemblies: 2
+  Classes: 37
+  Files: 34
+  Line coverage: 40%
+  Covered lines: 175
+  Uncovered lines: 262
+  Coverable lines: 437
+  Total lines: 823
+  Branch coverage: 40.5% (30 of 74)
+  Covered branches: 30
+  Total branches: 74
+  Method coverage: 38.6% (56 of 145)
+  Full method coverage: 31% (45 of 145)
+  Covered methods: 56
+  Fully covered methods: 45
+  Total methods: 145
+
+MsProduccionAlimentos.Application                                                                               9.8%
+  MsProduccionAlimentos.Application.Commands.AgregarPorcion.AgregarPorcionCommand                                 0%
+  MsProduccionAlimentos.Application.Commands.AgregarPorcion.AgregarPorcionCommandHandler                          0%
+  MsProduccionAlimentos.Application.Commands.ArmarPaquete.ArmarPaqueteCommand                                     0%
+  MsProduccionAlimentos.Application.Commands.ArmarPaquete.ArmarPaqueteCommandHandler                              0%
+  MsProduccionAlimentos.Application.Commands.CancelarOrden.CancelarOrdenCommand                                   0%
+  MsProduccionAlimentos.Application.Commands.CancelarOrden.CancelarOrdenCommandHandler                            0%
+  MsProduccionAlimentos.Application.Commands.EntregarALogistica.EntregarALogisticaCommand                         0%
+  MsProduccionAlimentos.Application.Commands.EntregarALogistica.EntregarALogisticaCommandHandler                  0%
+  MsProduccionAlimentos.Application.Commands.EnvasarPorcion.EnvasarPorcionCommand                                 0%
+  MsProduccionAlimentos.Application.Commands.EnvasarPorcion.EnvasarPorcionCommandHandler                          0%
+  MsProduccionAlimentos.Application.Commands.GenerarOrden.GenerarOrdenCommand                                   100%
+  MsProduccionAlimentos.Application.Commands.GenerarOrden.GenerarOrdenCommandHandler                            100%
+  MsProduccionAlimentos.Application.Commands.GenerarOrden.GenerarOrdenItemDto                                   100%
+  MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.GenerarOrdenDesdePedidosCommand             0%
+  MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.GenerarOrdenDesdePedidosCommandHandler      0%
+  MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.GenerarOrdenDesdePedidosResult              0%
+  MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.PedidoPacienteDto                           0%
+  MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.PedidoRecetaDto                             0%
+  MsProduccionAlimentos.Application.Commands.MarcarItemPreparado.MarcarItemPreparadoCommand                       0%
+  MsProduccionAlimentos.Application.Commands.MarcarItemPreparado.MarcarItemPreparadoCommandHandler                0%
+  MsProduccionAlimentos.Application.DTOs.OrdenDto                                                                 0%
+  MsProduccionAlimentos.Application.DTOs.PaqueteDto                                                               0%
+  MsProduccionAlimentos.Application.Queries.ListarOrdenes.ListarOrdenesQueryHandler                               0%
+  MsProduccionAlimentos.Application.Queries.ObtenerOrdenPorId.ObtenerOrdenPorIdQuery                              0%
+  MsProduccionAlimentos.Application.Queries.ObtenerOrdenPorId.ObtenerOrdenPorIdQueryHandler                       0%
+  MsProduccionAlimentos.Application.Queries.ObtenerPaquetePorId.ObtenerPaquetePorIdQuery                          0%
+  MsProduccionAlimentos.Application.Queries.ObtenerPaquetePorId.ObtenerPaquetePorIdQueryHandler                   0%
+
+MsProduccionAlimentos.Domain                                                                                   71.8%
+  MsProduccionAlimentos.Domain.Aggregates.OrdenProduccion                                                      85.4%
+  MsProduccionAlimentos.Domain.Aggregates.Paquete                                                              80.4%
+  MsProduccionAlimentos.Domain.Entities.ItemOrden                                                              76.6%
+  MsProduccionAlimentos.Domain.Entities.Porcion                                                                69.2%
+  MsProduccionAlimentos.Domain.Events.OrdenCancelada                                                             60%
+  MsProduccionAlimentos.Domain.ValueObjects.Etiqueta                                                           73.6%
+  MsProduccionAlimentos.Domain.ValueObjects.ItemOrdenId                                                        37.5%
+  MsProduccionAlimentos.Domain.ValueObjects.OrdenId                                                            37.5%
+  MsProduccionAlimentos.Domain.ValueObjects.PaqueteId                                                            25%
+  MsProduccionAlimentos.Domain.ValueObjects.PorcionId                                                          37.5%

@@ -1,5 +1,7 @@
 using MsProduccionAlimentos.Application.Commands.GenerarOrden;
 using MsProduccionAlimentos.Infrastructure;
+using MsProduccionAlimentos.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+// Aplicar migraciones automáticamente al arrancar
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<NurTricenterDbContext>();
+    db.Database.Migrate();
+}
 
 app.UseSwagger();
 app.UseSwaggerUI();

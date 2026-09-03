@@ -1,7 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MsProduccionAlimentos.Application.Commands.AgregarPorcion;
 using MsProduccionAlimentos.Application.Commands.ArmarPaquete;
 using MsProduccionAlimentos.Application.Commands.EntregarALogistica;
+using MsProduccionAlimentos.Application.Commands.EnvasarPorcion;
 using MsProduccionAlimentos.Application.Queries.ObtenerPaquetePorId;
 
 namespace MsProduccionAlimentos.Api.Controllers;
@@ -31,6 +33,20 @@ public class PaquetesController : ControllerBase
         return paquete is null ? NotFound() : Ok(paquete);
     }
 
+    [HttpPost("{id:guid}/porciones")]
+    public async Task<IActionResult> AgregarPorcion(Guid id, [FromBody] AgregarPorcionRequest request)
+    {
+        var porcionId = await _mediator.Send(new AgregarPorcionCommand(id, request.RecetaId, request.Cantidad));
+        return Created($"/api/paquetes/{id}/porciones/{porcionId}", new { id = porcionId });
+    }
+
+    [HttpPost("{id:guid}/porciones/{porcionId:guid}/envasar")]
+    public async Task<IActionResult> EnvasarPorcion(Guid id, Guid porcionId)
+    {
+        await _mediator.Send(new EnvasarPorcionCommand(id, porcionId));
+        return NoContent();
+    }
+
     [HttpPost("{id:guid}/entregar")]
     public async Task<IActionResult> EntregarALogistica(Guid id)
     {
@@ -38,3 +54,5 @@ public class PaquetesController : ControllerBase
         return NoContent();
     }
 }
+
+public record AgregarPorcionRequest(Guid RecetaId, decimal Cantidad);

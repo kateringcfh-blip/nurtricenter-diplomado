@@ -1,0 +1,11 @@
+.vs/
+bin/
+obj/
+tmp_media/
+DOCS/
+*.user
+.DS_Store
+Thumbs.db
+**/.vs/
+**/bin/
+**/obj/

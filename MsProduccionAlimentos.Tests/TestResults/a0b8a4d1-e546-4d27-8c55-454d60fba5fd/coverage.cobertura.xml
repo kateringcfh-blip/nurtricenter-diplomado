@@ -1,0 +1,2086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.4004" branch-rate="0.3947" version="1.9" timestamp="1788223759" lines-covered="175" lines-valid="437" branches-covered="30" branches-valid="76">
+  <sources>
+    <source>D:\CLAUDE_CODE\Modulo2_Nurtricenter\</source>
+  </sources>
+  <packages>
+    <package name="MsProduccionAlimentos.Application" line-rate="0.09820000000000001" branch-rate="0.0909" complexity="89">
+      <classes>
+        <class name="MsProduccionAlimentos.Application.Queries.ObtenerPaquetePorId.ObtenerPaquetePorIdQuery" filename="MsProduccionAlimentos.Application\Queries\ObtenerPaquetePorId\ObtenerPaquetePorIdQuery.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_PaqueteId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Queries.ObtenerPaquetePorId.ObtenerPaquetePorIdQueryHandler" filename="MsProduccionAlimentos.Application\Queries\ObtenerPaquetePorId\ObtenerPaquetePorIdQueryHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.INurTricenterDbContext)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Queries.ObtenerPaquetePorId.ObtenerPaquetePorIdQueryHandler/&lt;Handle&gt;d__2" filename="MsProduccionAlimentos.Application\Queries\ObtenerPaquetePorId\ObtenerPaquetePorIdQueryHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Queries.ObtenerOrdenPorId.ObtenerOrdenPorIdQuery" filename="MsProduccionAlimentos.Application\Queries\ObtenerOrdenPorId\ObtenerOrdenPorIdQuery.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_OrdenId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Queries.ObtenerOrdenPorId.ObtenerOrdenPorIdQueryHandler" filename="MsProduccionAlimentos.Application\Queries\ObtenerOrdenPorId\ObtenerOrdenPorIdQueryHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.INurTricenterDbContext)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Queries.ObtenerOrdenPorId.ObtenerOrdenPorIdQueryHandler/&lt;Handle&gt;d__2" filename="MsProduccionAlimentos.Application\Queries\ObtenerOrdenPorId\ObtenerOrdenPorIdQueryHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Queries.ListarOrdenes.ListarOrdenesQueryHandler" filename="MsProduccionAlimentos.Application\Queries\ListarOrdenes\ListarOrdenesQueryHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.INurTricenterDbContext)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Queries.ListarOrdenes.ListarOrdenesQueryHandler/&lt;Handle&gt;d__2" filename="MsProduccionAlimentos.Application\Queries\ListarOrdenes\ListarOrdenesQueryHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.DTOs.OrdenDto" filename="MsProduccionAlimentos.Application\DTOs\OrdenDto.cs" line-rate="0" branch-rate="1" complexity="7">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="4" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Fecha" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Estado" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_LoteProduccion" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalItems" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ItemsCompletos" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid,System.DateOnly,System.String,System.String,System.Int32,System.Int32)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="3" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="4" hits="0" branch="False" />
+            <line number="5" hits="0" branch="False" />
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="3" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.DTOs.PaqueteDto" filename="MsProduccionAlimentos.Application\DTOs\PaqueteDto.cs" line-rate="0" branch-rate="1" complexity="8">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="4" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PacienteId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrdenId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Fecha" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Estado" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_NombrePaciente" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalPorciones" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid,System.Guid,System.Guid,System.DateOnly,System.String,System.String,System.Int32)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="3" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="4" hits="0" branch="False" />
+            <line number="5" hits="0" branch="False" />
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="3" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.MarcarItemPreparado.MarcarItemPreparadoCommand" filename="MsProduccionAlimentos.Application\Commands\MarcarItemPreparado\MarcarItemPreparadoCommand.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_OrdenId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.MarcarItemPreparado.MarcarItemPreparadoCommandHandler" filename="MsProduccionAlimentos.Application\Commands\MarcarItemPreparado\MarcarItemPreparadoCommandHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.IOrdenRepository,MsProduccionAlimentos.Application.Interfaces.IUnitOfWork)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.MarcarItemPreparado.MarcarItemPreparadoCommandHandler/&lt;Handle&gt;d__3" filename="MsProduccionAlimentos.Application\Commands\MarcarItemPreparado\MarcarItemPreparadoCommandHandler.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="161" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="161" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="21" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrden.GenerarOrdenCommand" filename="MsProduccionAlimentos.Application\Commands\GenerarOrden\GenerarOrdenCommand.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_EncargadoCocinaId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_LoteProduccion" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Fecha" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Items" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid,System.String,System.DateOnly,System.Collections.Generic.List`1&lt;MsProduccionAlimentos.Application.Commands.GenerarOrden.GenerarOrdenItemDto&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="3" branch="False" />
+            <line number="7" hits="3" branch="False" />
+            <line number="8" hits="3" branch="False" />
+            <line number="9" hits="6" branch="False" />
+            <line number="5" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrden.GenerarOrdenCommandHandler" filename="MsProduccionAlimentos.Application\Commands\GenerarOrden\GenerarOrdenCommandHandler.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.IOrdenRepository,MsProduccionAlimentos.Application.Interfaces.IUnitOfWork)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="3" branch="False" />
+                <line number="13" hits="3" branch="False" />
+                <line number="14" hits="3" branch="False" />
+                <line number="15" hits="3" branch="False" />
+                <line number="16" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="3" branch="False" />
+            <line number="13" hits="3" branch="False" />
+            <line number="14" hits="3" branch="False" />
+            <line number="15" hits="3" branch="False" />
+            <line number="16" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrden.GenerarOrdenCommandHandler/&lt;Handle&gt;d__3" filename="MsProduccionAlimentos.Application\Commands\GenerarOrden\GenerarOrdenCommandHandler.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="19" hits="3" branch="False" />
+                <line number="20" hits="3" branch="False" />
+                <line number="21" hits="3" branch="False" />
+                <line number="22" hits="3" branch="False" />
+                <line number="23" hits="3" branch="False" />
+                <line number="25" hits="17" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="167" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="26" hits="4" branch="False" />
+                <line number="28" hits="3" branch="False" />
+                <line number="29" hits="3" branch="False" />
+                <line number="31" hits="3" branch="False" />
+                <line number="32" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="3" branch="False" />
+            <line number="20" hits="3" branch="False" />
+            <line number="21" hits="3" branch="False" />
+            <line number="22" hits="3" branch="False" />
+            <line number="23" hits="3" branch="False" />
+            <line number="25" hits="17" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="167" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="26" hits="4" branch="False" />
+            <line number="28" hits="3" branch="False" />
+            <line number="29" hits="3" branch="False" />
+            <line number="31" hits="3" branch="False" />
+            <line number="32" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrden.GenerarOrdenItemDto" filename="MsProduccionAlimentos.Application\Commands\GenerarOrden\GenerarOrdenItemDto.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_RecetaId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="3" hits="12" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="3" hits="12" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.PedidoRecetaDto" filename="MsProduccionAlimentos.Application\Commands\GenerarOrdenDesdePedidos\GenerarOrdenDesdePedidosCommand.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_RecetaId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.PedidoPacienteDto" filename="MsProduccionAlimentos.Application\Commands\GenerarOrdenDesdePedidos\GenerarOrdenDesdePedidosCommand.cs" line-rate="0" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_PacienteId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_NombrePaciente" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DireccionEntrega" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_NumeroId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Recetas" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid,System.String,System.String,System.String,System.Collections.Generic.List`1&lt;MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.PedidoRecetaDto&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.GenerarOrdenDesdePedidosCommand" filename="MsProduccionAlimentos.Application\Commands\GenerarOrdenDesdePedidos\GenerarOrdenDesdePedidosCommand.cs" line-rate="0" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_EncargadoCocinaId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Fecha" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Pedidos" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid,System.DateOnly,System.Collections.Generic.List`1&lt;MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.PedidoPacienteDto&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.GenerarOrdenDesdePedidosResult" filename="MsProduccionAlimentos.Application\Commands\GenerarOrdenDesdePedidos\GenerarOrdenDesdePedidosCommand.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_OrdenId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.GenerarOrdenDesdePedidosCommandHandler" filename="MsProduccionAlimentos.Application\Commands\GenerarOrdenDesdePedidos\GenerarOrdenDesdePedidosCommandHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.IOrdenRepository,MsProduccionAlimentos.Application.Interfaces.IPaqueteRepository,MsProduccionAlimentos.Application.Interfaces.IUnitOfWork)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.GenerarOrdenDesdePedidosCommandHandler/&lt;&gt;c" filename="MsProduccionAlimentos.Application\Commands\GenerarOrdenDesdePedidos\GenerarOrdenDesdePedidosCommandHandler.cs" line-rate="0" branch-rate="1" complexity="4">
+          <methods>
+            <method name="&lt;Handle&gt;b__4_0" signature="(MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.PedidoPacienteDto)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="31" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;Handle&gt;b__4_1" signature="(MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.PedidoRecetaDto)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="32" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;Handle&gt;b__4_2" signature="(System.Linq.IGrouping`2&lt;System.Guid,MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.PedidoRecetaDto&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;Handle&gt;b__4_4" signature="(MsProduccionAlimentos.Domain.Aggregates.Paquete)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="67" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="67" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.GenerarOrdenDesdePedidos.GenerarOrdenDesdePedidosCommandHandler/&lt;Handle&gt;d__4" filename="MsProduccionAlimentos.Application\Commands\GenerarOrdenDesdePedidos\GenerarOrdenDesdePedidosCommandHandler.cs" line-rate="0" branch-rate="0" complexity="8">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="8">
+              <lines>
+                <line number="28" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="443" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="40" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="45" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="822" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="48" hits="0" branch="False" />
+                <line number="50" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="732" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="51" hits="0" branch="False" />
+                <line number="53" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
+                <line number="58" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="1163" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="59" hits="0" branch="False" />
+                <line number="62" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+                <line number="66" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="443" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="40" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="45" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="822" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="48" hits="0" branch="False" />
+            <line number="50" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="732" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="51" hits="0" branch="False" />
+            <line number="53" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
+            <line number="58" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="1163" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="59" hits="0" branch="False" />
+            <line number="62" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+            <line number="66" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.EnvasarPorcion.EnvasarPorcionCommand" filename="MsProduccionAlimentos.Application\Commands\EnvasarPorcion\EnvasarPorcionCommand.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_PaqueteId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.EnvasarPorcion.EnvasarPorcionCommandHandler" filename="MsProduccionAlimentos.Application\Commands\EnvasarPorcion\EnvasarPorcionCommandHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.IPaqueteRepository,MsProduccionAlimentos.Application.Interfaces.IUnitOfWork)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.EnvasarPorcion.EnvasarPorcionCommandHandler/&lt;&gt;c__DisplayClass3_0" filename="MsProduccionAlimentos.Application\Commands\EnvasarPorcion\EnvasarPorcionCommandHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;Handle&gt;b__0" signature="(MsProduccionAlimentos.Domain.Entities.Porcion)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.EnvasarPorcion.EnvasarPorcionCommandHandler/&lt;Handle&gt;d__3" filename="MsProduccionAlimentos.Application\Commands\EnvasarPorcion\EnvasarPorcionCommandHandler.cs" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="194" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="194" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="21" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.EntregarALogistica.EntregarALogisticaCommand" filename="MsProduccionAlimentos.Application\Commands\EntregarALogistica\EntregarALogisticaCommand.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_PaqueteId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.EntregarALogistica.EntregarALogisticaCommandHandler" filename="MsProduccionAlimentos.Application\Commands\EntregarALogistica\EntregarALogisticaCommandHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.IPaqueteRepository,MsProduccionAlimentos.Application.Interfaces.IUnitOfWork)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.EntregarALogistica.EntregarALogisticaCommandHandler/&lt;Handle&gt;d__3" filename="MsProduccionAlimentos.Application\Commands\EntregarALogistica\EntregarALogisticaCommandHandler.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="161" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="161" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="21" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.CancelarOrden.CancelarOrdenCommand" filename="MsProduccionAlimentos.Application\Commands\CancelarOrden\CancelarOrdenCommand.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_OrdenId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.CancelarOrden.CancelarOrdenCommandHandler" filename="MsProduccionAlimentos.Application\Commands\CancelarOrden\CancelarOrdenCommandHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.IOrdenRepository,MsProduccionAlimentos.Application.Interfaces.IUnitOfWork)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.CancelarOrden.CancelarOrdenCommandHandler/&lt;Handle&gt;d__3" filename="MsProduccionAlimentos.Application\Commands\CancelarOrden\CancelarOrdenCommandHandler.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="161" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="161" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="21" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.ArmarPaquete.ArmarPaqueteCommand" filename="MsProduccionAlimentos.Application\Commands\ArmarPaquete\ArmarPaqueteCommand.cs" line-rate="0" branch-rate="1" complexity="7">
+          <methods>
+            <method name="get_PacienteId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrdenId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Fecha" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_NombrePaciente" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DireccionEntrega" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_NumeroId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid,System.Guid,System.DateOnly,System.String,System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="5" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.ArmarPaquete.ArmarPaqueteCommandHandler" filename="MsProduccionAlimentos.Application\Commands\ArmarPaquete\ArmarPaqueteCommandHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.IPaqueteRepository,MsProduccionAlimentos.Application.Interfaces.IUnitOfWork)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.ArmarPaquete.ArmarPaqueteCommandHandler/&lt;Handle&gt;d__3" filename="MsProduccionAlimentos.Application\Commands\ArmarPaquete\ArmarPaqueteCommandHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.AgregarPorcion.AgregarPorcionCommand" filename="MsProduccionAlimentos.Application\Commands\AgregarPorcion\AgregarPorcionCommand.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_PaqueteId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.AgregarPorcion.AgregarPorcionCommandHandler" filename="MsProduccionAlimentos.Application\Commands\AgregarPorcion\AgregarPorcionCommandHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Application.Interfaces.IPaqueteRepository,MsProduccionAlimentos.Application.Interfaces.IUnitOfWork)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Application.Commands.AgregarPorcion.AgregarPorcionCommandHandler/&lt;Handle&gt;d__3" filename="MsProduccionAlimentos.Application\Commands\AgregarPorcion\AgregarPorcionCommandHandler.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="161" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="161" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="21" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MsProduccionAlimentos.Domain" line-rate="0.7182999999999999" branch-rate="0.5185" complexity="110">
+      <classes>
+        <class name="MsProduccionAlimentos.Domain.ValueObjects.Etiqueta" filename="MsProduccionAlimentos.Domain\ValueObjects\Etiqueta.cs" line-rate="0.7368000000000001" branch-rate="0.6666" complexity="11">
+          <methods>
+            <method name="get_NombrePaciente" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DireccionEntrega" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_NumeroId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="Crear" signature="(System.String,System.String,System.String)" line-rate="0.7777" branch-rate="0.6666" complexity="6">
+              <lines>
+                <line number="19" hits="8" branch="False" />
+                <line number="20" hits="8" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="1" branch="False" />
+                <line number="22" hits="7" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="35" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="7" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="61" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="25" hits="0" branch="False" />
+                <line number="27" hits="7" branch="False" />
+                <line number="28" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String,System.String,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="7" branch="False" />
+                <line number="12" hits="7" branch="False" />
+                <line number="13" hits="7" branch="False" />
+                <line number="14" hits="7" branch="False" />
+                <line number="15" hits="7" branch="False" />
+                <line number="16" hits="7" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="1" branch="False" />
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="19" hits="8" branch="False" />
+            <line number="20" hits="8" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="9" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="7" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="35" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="7" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="61" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="25" hits="0" branch="False" />
+            <line number="27" hits="7" branch="False" />
+            <line number="28" hits="7" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="11" hits="7" branch="False" />
+            <line number="12" hits="7" branch="False" />
+            <line number="13" hits="7" branch="False" />
+            <line number="14" hits="7" branch="False" />
+            <line number="15" hits="7" branch="False" />
+            <line number="16" hits="7" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Domain.ValueObjects.ItemOrdenId" filename="MsProduccionAlimentos.Domain\ValueObjects\ItemOrdenId.cs" line-rate="0.375" branch-rate="0" complexity="5">
+          <methods>
+            <method name="get_Valor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="Crear" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="De" signature="(System.Guid)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="12" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="1" branch="False" />
+            <line number="9" hits="12" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="14" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="7" hits="12" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Domain.ValueObjects.OrdenId" filename="MsProduccionAlimentos.Domain\ValueObjects\OrdenId.cs" line-rate="0.375" branch-rate="0" complexity="5">
+          <methods>
+            <method name="get_Valor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="Crear" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name="De" signature="(System.Guid)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="17" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="3" branch="False" />
+            <line number="9" hits="17" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="14" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="7" hits="17" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Domain.ValueObjects.PaqueteId" filename="MsProduccionAlimentos.Domain\ValueObjects\PaqueteId.cs" line-rate="0.25" branch-rate="0" complexity="5">
+          <methods>
+            <method name="get_Valor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="Crear" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="De" signature="(System.Guid)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+            <line number="9" hits="6" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="14" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="7" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Domain.ValueObjects.PorcionId" filename="MsProduccionAlimentos.Domain\ValueObjects\PorcionId.cs" line-rate="0.375" branch-rate="0" complexity="5">
+          <methods>
+            <method name="get_Valor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="Crear" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="De" signature="(System.Guid)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Guid)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="5" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="1" branch="False" />
+            <line number="9" hits="5" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="14" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="7" hits="5" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Domain.Events.OrdenCancelada" filename="MsProduccionAlimentos.Domain\Events\OrdenCancelada.cs" line-rate="0.6" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_OrdenId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Motivo" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_FechaCancelacion" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="Crear" signature="(MsProduccionAlimentos.Domain.ValueObjects.OrdenId,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Domain.ValueObjects.OrdenId,System.String,System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="3" branch="False" />
+            <line number="11" hits="3" branch="False" />
+            <line number="5" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Domain.Entities.ItemOrden" filename="MsProduccionAlimentos.Domain\Entities\ItemOrden.cs" line-rate="0.7666" branch-rate="0.5" complexity="18">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_RecetaId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CantidadRequerida" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CantidadPreparada" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="34" branch="False" />
+              </lines>
+            </method>
+            <method name="Crear" signature="(System.Guid,System.Int32)" line-rate="0.7142000000000001" branch-rate="0.5" complexity="4">
+              <lines>
+                <line number="23" hits="12" branch="False" />
+                <line number="24" hits="12" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="12" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="41" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="27" hits="0" branch="False" />
+                <line number="29" hits="12" branch="False" />
+                <line number="30" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="MarcarPreparado" signature="(System.Int32)" line-rate="0.875" branch-rate="0.75" complexity="4">
+              <lines>
+                <line number="33" hits="6" branch="False" />
+                <line number="34" hits="6" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="10" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="6" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="46" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="40" hits="5" branch="False" />
+                <line number="41" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="EstaCompleto" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="43" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="Equals" signature="(System.Object)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="45" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="8" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+            <method name="GetHashCode" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="46" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Domain.ValueObjects.ItemOrdenId,System.Guid,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="12" branch="False" />
+                <line number="15" hits="12" branch="False" />
+                <line number="16" hits="12" branch="False" />
+                <line number="17" hits="12" branch="False" />
+                <line number="18" hits="12" branch="False" />
+                <line number="19" hits="12" branch="False" />
+                <line number="20" hits="12" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="5" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="12" branch="False" />
+            <line number="10" hits="34" branch="False" />
+            <line number="23" hits="12" branch="False" />
+            <line number="24" hits="12" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="14" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="12" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="41" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="27" hits="0" branch="False" />
+            <line number="29" hits="12" branch="False" />
+            <line number="30" hits="12" branch="False" />
+            <line number="33" hits="6" branch="False" />
+            <line number="34" hits="6" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="10" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="6" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="46" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="40" hits="5" branch="False" />
+            <line number="41" hits="5" branch="False" />
+            <line number="43" hits="5" branch="False" />
+            <line number="45" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="8" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="46" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="14" hits="12" branch="False" />
+            <line number="15" hits="12" branch="False" />
+            <line number="16" hits="12" branch="False" />
+            <line number="17" hits="12" branch="False" />
+            <line number="18" hits="12" branch="False" />
+            <line number="19" hits="12" branch="False" />
+            <line number="20" hits="12" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Domain.Entities.Porcion" filename="MsProduccionAlimentos.Domain\Entities\Porcion.cs" line-rate="0.6923" branch-rate="0.375" complexity="15">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_RecetaId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Cantidad" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_EstaEnvasada" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="15" branch="False" />
+              </lines>
+            </method>
+            <method name="Crear" signature="(System.Guid,System.Decimal)" line-rate="0.7142000000000001" branch-rate="0.5" complexity="4">
+              <lines>
+                <line number="23" hits="5" branch="False" />
+                <line number="24" hits="5" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="5" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="45" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="27" hits="0" branch="False" />
+                <line number="29" hits="5" branch="False" />
+                <line number="30" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="Envasar" signature="()" line-rate="0.8" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="33" hits="3" branch="False" />
+                <line number="34" hits="3" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="0" branch="False" />
+                <line number="37" hits="3" branch="False" />
+                <line number="38" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="Equals" signature="(System.Object)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="40" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="8" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+            <method name="GetHashCode" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="41" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Domain.ValueObjects.PorcionId,System.Guid,System.Decimal)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="5" branch="False" />
+                <line number="15" hits="5" branch="False" />
+                <line number="16" hits="5" branch="False" />
+                <line number="17" hits="5" branch="False" />
+                <line number="18" hits="5" branch="False" />
+                <line number="19" hits="5" branch="False" />
+                <line number="20" hits="5" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="1" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="15" branch="False" />
+            <line number="23" hits="5" branch="False" />
+            <line number="24" hits="5" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="14" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="5" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="45" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="27" hits="0" branch="False" />
+            <line number="29" hits="5" branch="False" />
+            <line number="30" hits="5" branch="False" />
+            <line number="33" hits="3" branch="False" />
+            <line number="34" hits="3" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="9" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="35" hits="0" branch="False" />
+            <line number="37" hits="3" branch="False" />
+            <line number="38" hits="3" branch="False" />
+            <line number="40" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="8" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="41" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="14" hits="5" branch="False" />
+            <line number="15" hits="5" branch="False" />
+            <line number="16" hits="5" branch="False" />
+            <line number="17" hits="5" branch="False" />
+            <line number="18" hits="5" branch="False" />
+            <line number="19" hits="5" branch="False" />
+            <line number="20" hits="5" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Domain.Aggregates.OrdenProduccion" filename="MsProduccionAlimentos.Domain\Aggregates\OrdenProduccion.cs" line-rate="0.8545" branch-rate="0.7142000000000001" complexity="24">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Fecha" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Estado" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="33" branch="False" />
+              </lines>
+            </method>
+            <method name="get_EncargadoCocinaId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_LoteProduccion" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Items" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_EventosOcurridos" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="Generar" signature="(System.Guid,System.String,System.DateOnly)" line-rate="0.7142000000000001" branch-rate="0.5" complexity="4">
+              <lines>
+                <line number="33" hits="11" branch="False" />
+                <line number="34" hits="11" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="11" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="40" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="37" hits="0" branch="False" />
+                <line number="39" hits="11" branch="False" />
+                <line number="40" hits="11" branch="False" />
+              </lines>
+            </method>
+            <method name="AgregarItem" signature="(System.Guid,System.Int32)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="43" hits="9" branch="False" />
+                <line number="44" hits="9" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="48" hits="8" branch="False" />
+                <line number="49" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name="MarcarItemPreparado" signature="(MsProduccionAlimentos.Domain.ValueObjects.ItemOrdenId,System.Int32)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="52" hits="2" branch="False" />
+                <line number="53" hits="4" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="38" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="54" hits="2" branch="False" />
+                <line number="55" hits="2" branch="False" />
+                <line number="57" hits="2" branch="False" />
+                <line number="58" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="Completar" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="61" hits="3" branch="False" />
+                <line number="62" hits="6" branch="False" />
+                <line number="63" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="60" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="64" hits="1" branch="False" />
+                <line number="65" hits="2" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
+                <line number="70" hits="2" branch="False" />
+                <line number="71" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="Cancelar" signature="(System.String)" line-rate="0.875" branch-rate="0.75" complexity="4">
+              <lines>
+                <line number="74" hits="4" branch="False" />
+                <line number="75" hits="4" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="76" hits="1" branch="False" />
+                <line number="77" hits="3" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="33" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="78" hits="0" branch="False" />
+                <line number="80" hits="3" branch="False" />
+                <line number="81" hits="3" branch="False" />
+                <line number="82" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="LimpiarEventos" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="84" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="0.6666" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="11" branch="False" />
+                <line number="11" hits="11" branch="False" />
+                <line number="21" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Domain.ValueObjects.OrdenId,System.DateOnly,System.Guid,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="11" branch="False" />
+                <line number="24" hits="11" branch="False" />
+                <line number="25" hits="11" branch="False" />
+                <line number="26" hits="11" branch="False" />
+                <line number="27" hits="11" branch="False" />
+                <line number="28" hits="11" branch="False" />
+                <line number="29" hits="11" branch="False" />
+                <line number="30" hits="11" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="6" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="33" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="3" branch="False" />
+            <line number="19" hits="1" branch="False" />
+            <line number="33" hits="11" branch="False" />
+            <line number="34" hits="11" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="14" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="11" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="40" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="37" hits="0" branch="False" />
+            <line number="39" hits="11" branch="False" />
+            <line number="40" hits="11" branch="False" />
+            <line number="43" hits="9" branch="False" />
+            <line number="44" hits="9" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="12" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="48" hits="8" branch="False" />
+            <line number="49" hits="8" branch="False" />
+            <line number="52" hits="2" branch="False" />
+            <line number="53" hits="4" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="38" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="54" hits="2" branch="False" />
+            <line number="55" hits="2" branch="False" />
+            <line number="57" hits="2" branch="False" />
+            <line number="58" hits="2" branch="False" />
+            <line number="61" hits="3" branch="False" />
+            <line number="62" hits="6" branch="False" />
+            <line number="63" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="60" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="64" hits="1" branch="False" />
+            <line number="65" hits="2" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
+            <line number="70" hits="2" branch="False" />
+            <line number="71" hits="2" branch="False" />
+            <line number="74" hits="4" branch="False" />
+            <line number="75" hits="4" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="12" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="76" hits="1" branch="False" />
+            <line number="77" hits="3" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="33" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="78" hits="0" branch="False" />
+            <line number="80" hits="3" branch="False" />
+            <line number="81" hits="3" branch="False" />
+            <line number="82" hits="3" branch="False" />
+            <line number="84" hits="0" branch="False" />
+            <line number="10" hits="11" branch="False" />
+            <line number="11" hits="11" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="23" hits="11" branch="False" />
+            <line number="24" hits="11" branch="False" />
+            <line number="25" hits="11" branch="False" />
+            <line number="26" hits="11" branch="False" />
+            <line number="27" hits="11" branch="False" />
+            <line number="28" hits="11" branch="False" />
+            <line number="29" hits="11" branch="False" />
+            <line number="30" hits="11" branch="False" />
+          </lines>
+        </class>
+        <class name="MsProduccionAlimentos.Domain.Aggregates.Paquete" filename="MsProduccionAlimentos.Domain\Aggregates\Paquete.cs" line-rate="0.8043" branch-rate="0.75" complexity="17">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PacienteId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrdenId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Fecha" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Etiqueta" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Estado" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Porciones" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="Armar" signature="(System.Guid,MsProduccionAlimentos.Domain.ValueObjects.OrdenId,MsProduccionAlimentos.Domain.ValueObjects.Etiqueta,System.DateOnly)" line-rate="0.8" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="32" hits="6" branch="False" />
+                <line number="33" hits="6" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="34" hits="0" branch="False" />
+                <line number="36" hits="6" branch="False" />
+                <line number="37" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="AgregarPorcion" signature="(System.Guid,System.Decimal)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="40" hits="6" branch="False" />
+                <line number="41" hits="6" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="5" branch="False" />
+                <line number="45" hits="5" branch="False" />
+                <line number="46" hits="5" branch="False" />
+                <line number="47" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="MarcarListo" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="50" hits="4" branch="False" />
+                <line number="51" hits="8" branch="False" />
+                <line number="52" hits="4" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="60" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="53" hits="1" branch="False" />
+                <line number="54" hits="2" branch="False" />
+                <line number="55" hits="1" branch="False" />
+                <line number="56" hits="1" branch="False" />
+                <line number="59" hits="3" branch="False" />
+                <line number="60" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="EntregarALogistica" signature="()" line-rate="0.6666" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="63" hits="1" branch="False" />
+                <line number="64" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="15" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="65" hits="0" branch="False" />
+                <line number="66" hits="0" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="0.5" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="6" branch="False" />
+                <line number="19" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(MsProduccionAlimentos.Domain.ValueObjects.PaqueteId,System.Guid,MsProduccionAlimentos.Domain.ValueObjects.OrdenId,MsProduccionAlimentos.Domain.ValueObjects.Etiqueta,System.DateOnly)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="6" branch="False" />
+                <line number="22" hits="6" branch="False" />
+                <line number="23" hits="6" branch="False" />
+                <line number="24" hits="6" branch="False" />
+                <line number="25" hits="6" branch="False" />
+                <line number="26" hits="6" branch="False" />
+                <line number="27" hits="6" branch="False" />
+                <line number="28" hits="6" branch="False" />
+                <line number="29" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="21" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="32" hits="6" branch="False" />
+            <line number="33" hits="6" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="14" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="34" hits="0" branch="False" />
+            <line number="36" hits="6" branch="False" />
+            <line number="37" hits="6" branch="False" />
+            <line number="40" hits="6" branch="False" />
+            <line number="41" hits="6" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="12" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="5" branch="False" />
+            <line number="45" hits="5" branch="False" />
+            <line number="46" hits="5" branch="False" />
+            <line number="47" hits="5" branch="False" />
+            <line number="50" hits="4" branch="False" />
+            <line number="51" hits="8" branch="False" />
+            <line number="52" hits="4" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="60" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="53" hits="1" branch="False" />
+            <line number="54" hits="2" branch="False" />
+            <line number="55" hits="1" branch="False" />
+            <line number="56" hits="1" branch="False" />
+            <line number="59" hits="3" branch="False" />
+            <line number="60" hits="3" branch="False" />
+            <line number="63" hits="1" branch="False" />
+            <line number="64" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="15" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="65" hits="0" branch="False" />
+            <line number="66" hits="0" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="9" hits="6" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="21" hits="6" branch="False" />
+            <line number="22" hits="6" branch="False" />
+            <line number="23" hits="6" branch="False" />
+            <line number="24" hits="6" branch="False" />
+            <line number="25" hits="6" branch="False" />
+            <line number="26" hits="6" branch="False" />
+            <line number="27" hits="6" branch="False" />
+            <line number="28" hits="6" branch="False" />
+            <line number="29" hits="6" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

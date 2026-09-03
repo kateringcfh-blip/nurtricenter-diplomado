@@ -1,16 +1,20 @@
 using Microsoft.EntityFrameworkCore;
+using MsProduccionAlimentos.Application.Interfaces;
 using MsProduccionAlimentos.Domain.Aggregates;
 using MsProduccionAlimentos.Domain.Enums;
 using MsProduccionAlimentos.Domain.ValueObjects;
 
 namespace MsProduccionAlimentos.Infrastructure.Persistence;
 
-public class NurTricenterDbContext : DbContext
+public class NurTricenterDbContext : DbContext, INurTricenterDbContext
 {
     public NurTricenterDbContext(DbContextOptions<NurTricenterDbContext> options) : base(options) { }
 
     public DbSet<OrdenProduccion> OrdenesProd => Set<OrdenProduccion>();
     public DbSet<Paquete> Paquetes => Set<Paquete>();
+
+    IQueryable<OrdenProduccion> INurTricenterDbContext.OrdenesProd => OrdenesProd;
+    IQueryable<Paquete> INurTricenterDbContext.Paquetes => Paquetes;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -21,6 +21,4 @@ public class PaqueteRepository : IPaqueteRepository
         => await _context.Paquetes
             .FirstOrDefaultAsync(p => p.Id == id);
 
-    public async Task GuardarCambios()
-        => await _context.SaveChangesAsync();
 }

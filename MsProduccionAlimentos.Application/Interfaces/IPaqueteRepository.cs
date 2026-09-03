@@ -7,5 +7,4 @@ public interface IPaqueteRepository
 {
     Task Agregar(Paquete paquete);
     Task<Paquete?> ObtenerPorId(PaqueteId id);
-    Task GuardarCambios();
 }

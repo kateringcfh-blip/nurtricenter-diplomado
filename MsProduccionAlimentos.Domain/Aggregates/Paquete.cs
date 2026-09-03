@@ -36,13 +36,14 @@ public class Paquete
         return new(PaqueteId.Crear(), pacienteId, ordenId, etiqueta, fecha);
     }
 
-    public void AgregarPorcion(Guid recetaId, decimal cantidad)
+    public Porcion AgregarPorcion(Guid recetaId, decimal cantidad)
     {
         if (Estado != EstadoPaquete.EnPreparacion)
             throw new InvalidOperationException(
                 $"No se pueden agregar porciones a un paquete en estado '{Estado}'.");
-
-        _porciones.Add(Porcion.Crear(recetaId, cantidad));
+        var porcion = Porcion.Crear(recetaId, cantidad);
+        _porciones.Add(porcion);
+        return porcion;
     }
 
     public void MarcarListo()

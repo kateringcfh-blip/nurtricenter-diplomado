@@ -1,0 +1,35 @@
+# ── ETAPA 1: Builder (compila el código) ──
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
+WORKDIR /src
+
+# Copiar solo los archivos de proyecto primero (mejor cache de capas)
+COPY NurTricenter.sln .
+COPY MsProduccionAlimentos.Domain/MsProduccionAlimentos.Domain.csproj MsProduccionAlimentos.Domain/
+COPY MsProduccionAlimentos.Application/MsProduccionAlimentos.Application.csproj MsProduccionAlimentos.Application/
+COPY MsProduccionAlimentos.Infrastructure/MsProduccionAlimentos.Infrastructure.csproj MsProduccionAlimentos.Infrastructure/
+COPY MsProduccionAlimentos.Api/MsProduccionAlimentos.Api.csproj MsProduccionAlimentos.Api/
+
+# Restaurar dependencias (cacheado si no cambian los .csproj)
+RUN dotnet restore "MsProduccionAlimentos.Api/MsProduccionAlimentos.Api.csproj"
+
+# Copiar el resto del código fuente
+COPY MsProduccionAlimentos.Domain/ MsProduccionAlimentos.Domain/
+COPY MsProduccionAlimentos.Application/ MsProduccionAlimentos.Application/
+COPY MsProduccionAlimentos.Infrastructure/ MsProduccionAlimentos.Infrastructure/
+COPY MsProduccionAlimentos.Api/ MsProduccionAlimentos.Api/
+
+# Compilar y publicar en modo Release
+RUN dotnet publish "MsProduccionAlimentos.Api/MsProduccionAlimentos.Api.csproj" \
+    -c Release \
+    --no-restore \
+    -o /app/publish
+
+# ── ETAPA 2: Runtime (solo lo necesario para ejecutar) ──
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+
+# Copiar SOLO el compilado desde la etapa builder
+COPY --from=builder /app/publish .
+
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "MsProduccionAlimentos.Api.dll"]

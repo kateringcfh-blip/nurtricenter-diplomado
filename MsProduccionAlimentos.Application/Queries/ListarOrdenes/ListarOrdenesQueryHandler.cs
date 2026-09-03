@@ -1,30 +1,29 @@
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using MsProduccionAlimentos.Application.DTOs;
 using MsProduccionAlimentos.Application.Interfaces;
-using MsProduccionAlimentos.Domain.Aggregates;
 
 namespace MsProduccionAlimentos.Application.Queries.ListarOrdenes;
 
 public class ListarOrdenesQueryHandler : IRequestHandler<ListarOrdenesQuery, List<OrdenDto>>
 {
-    private readonly IOrdenRepository _repository;
+    private readonly INurTricenterDbContext _context;
 
-    public ListarOrdenesQueryHandler(IOrdenRepository repository)
+    public ListarOrdenesQueryHandler(INurTricenterDbContext context)
     {
-        _repository = repository;
+        _context = context;
     }
 
     public async Task<List<OrdenDto>> Handle(ListarOrdenesQuery request, CancellationToken cancellationToken)
     {
-        var ordenes = await _repository.ObtenerTodos();
-        return ordenes.Select(MapearADto).ToList();
+        return await _context.OrdenesProd
+            .Select(o => new OrdenDto(
+                o.Id.Valor,
+                o.Fecha,
+                o.Estado.ToString(),
+                o.LoteProduccion,
+                o.Items.Count,
+                o.Items.Count(i => i.CantidadPreparada >= i.CantidadRequerida)))
+            .ToListAsync(cancellationToken);
     }
-
-    private static OrdenDto MapearADto(OrdenProduccion orden) => new(
-        Id: orden.Id.Valor,
-        Fecha: orden.Fecha,
-        Estado: orden.Estado.ToString(),
-        LoteProduccion: orden.LoteProduccion,
-        TotalItems: orden.Items.Count,
-        ItemsCompletos: orden.Items.Count(i => i.EstaCompleto()));
 }

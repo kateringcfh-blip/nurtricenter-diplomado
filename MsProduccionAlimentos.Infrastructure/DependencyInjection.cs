@@ -14,10 +14,18 @@ public static class DependencyInjection
         IConfiguration configuration)
     {
         services.AddDbContext<NurTricenterDbContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(
+                configuration.GetConnectionString("DefaultConnection"),
+                sqlOptions => sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 10,
+                    maxRetryDelay: TimeSpan.FromSeconds(5),
+                    errorNumbersToAdd: null)));
 
         services.AddScoped<IOrdenRepository, OrdenRepository>();
         services.AddScoped<IPaqueteRepository, PaqueteRepository>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<INurTricenterDbContext>(sp =>
+            sp.GetRequiredService<NurTricenterDbContext>());
 
         return services;
     }
