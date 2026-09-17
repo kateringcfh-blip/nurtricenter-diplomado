@@ -26,6 +26,9 @@ public class GenerarOrdenDesdePedidosCommandHandler
         GenerarOrdenDesdePedidosCommand request,
         CancellationToken cancellationToken)
     {
+        if (request.Pedidos is null || request.Pedidos.Count == 0)
+            throw new ArgumentException("Debe incluir al menos un pedido para generar la orden.");
+
         // Paso 1: agrupar recetas de todos los pedidos y sumar cantidades
         var totalesPorReceta = request.Pedidos
             .SelectMany(p => p.Recetas)

@@ -16,12 +16,29 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Aplicar migraciones automáticamente al arrancar
+// Aplicar migraciones automï¿½ticamente al arrancar
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<NurTricenterDbContext>();
     db.Database.Migrate();
 }
+
+app.UseExceptionHandler(errorApp =>
+{
+    errorApp.Run(async ctx =>
+    {
+        var ex = ctx.Features.Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerFeature>()?.Error;
+        ctx.Response.StatusCode = ex switch
+        {
+            KeyNotFoundException => 404,
+            InvalidOperationException => 400,
+            ArgumentException => 400,
+            _ => 500
+        };
+        ctx.Response.ContentType = "application/json";
+        await ctx.Response.WriteAsJsonAsync(new { error = ex?.Message });
+    });
+});
 
 app.UseSwagger();
 app.UseSwaggerUI();
@@ -30,3 +47,5 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }
