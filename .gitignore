@@ -19,3 +19,4 @@ Thumbs.db
 
 # Variables de entorno locales (nunca commitear)
 .env
+TestResults/ 

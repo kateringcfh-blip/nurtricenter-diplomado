@@ -10,6 +10,7 @@ namespace MsProduccionAlimentos.ContractTests;
 
 public class PacientesApiClientContractTests
 {
+    // Pact.V3(...).WithHttpInteractions() returns IPactBuilderV3 — UponReceiving/VerifyAsync live here
     // Pact.V3(...).WithHttpInteractions() retorna IPactBuilderV3 — ahí viven UponReceiving/VerifyAsync
     private readonly IPactBuilderV3 _pact;
 
