@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MsProduccionAlimentos.Application.Interfaces;
 using MsProduccionAlimentos.Infrastructure.ExternalClients;
+using MsProduccionAlimentos.Infrastructure.Messaging;
 using MsProduccionAlimentos.Infrastructure.Persistence;
 using MsProduccionAlimentos.Infrastructure.Persistence.Repositories;
 
@@ -32,6 +33,12 @@ public static class DependencyInjection
         {
             client.BaseAddress = new Uri(configuration["PacientesApi:BaseUrl"] ?? "http://localhost:5144");
         });
+
+        // Mensajería (RabbitMQ): publica OrdenCancelada y consume PacienteRegistrado.
+        services.Configure<RabbitMqOptions>(configuration.GetSection("RabbitMq"));
+        services.AddSingleton<IEventPublisher, RabbitMqEventPublisher>();
+        services.AddSingleton<IReceivedIntegrationEventsStore, InMemoryReceivedIntegrationEventsStore>();
+        services.AddHostedService<PacienteRegistradoConsumerService>();
 
         return services;
     }

@@ -1,5 +1,7 @@
 using MsPacientesEvaluacion.Application.Commands.RegistrarPaciente;
 using MsPacientesEvaluacion.Infrastructure;
+using MsPacientesEvaluacion.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+// Aplicar migraciones automáticamente al arrancar (igual que MsProduccionAlimentos.Api).
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<PacientesDbContext>();
+    db.Database.Migrate();
+}
 
 app.UseExceptionHandler(errorApp =>
 {

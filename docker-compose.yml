@@ -20,6 +20,21 @@ services:
     volumes:
       - sqlserver_data:/var/opt/mssql
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: nurtricenter_rabbitmq
+    ports:
+      - "5672:5672"     # protocolo AMQP (lo usan los microservicios)
+      - "15672:15672"   # panel de administración web (http://localhost:15672, guest/guest)
+    networks:
+      - nurtricenter_network
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_running"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
   api:
     build:
       context: .
@@ -30,12 +45,15 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
       - ConnectionStrings__DefaultConnection=Server=db;Database=NurTricenter;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True
+      - RabbitMq__HostName=rabbitmq
     ports:
       - "8082:8080"
     networks:
       - nurtricenter_network
     depends_on:
       db:
+        condition: service_healthy
+      rabbitmq:
         condition: service_healthy
 
 networks:
