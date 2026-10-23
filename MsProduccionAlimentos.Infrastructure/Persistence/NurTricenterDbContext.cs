@@ -3,6 +3,7 @@ using MsProduccionAlimentos.Application.Interfaces;
 using MsProduccionAlimentos.Domain.Aggregates;
 using MsProduccionAlimentos.Domain.Enums;
 using MsProduccionAlimentos.Domain.ValueObjects;
+using MsProduccionAlimentos.Infrastructure.Outbox;
 
 namespace MsProduccionAlimentos.Infrastructure.Persistence;
 
@@ -12,6 +13,7 @@ public class NurTricenterDbContext : DbContext, INurTricenterDbContext
 
     public DbSet<OrdenProduccion> OrdenesProd => Set<OrdenProduccion>();
     public DbSet<Paquete> Paquetes => Set<Paquete>();
+    public DbSet<OutboxMessage> OutboxMessages => Set<OutboxMessage>();
 
     IQueryable<OrdenProduccion> INurTricenterDbContext.OrdenesProd => OrdenesProd;
     IQueryable<Paquete> INurTricenterDbContext.Paquetes => Paquetes;
@@ -20,6 +22,7 @@ public class NurTricenterDbContext : DbContext, INurTricenterDbContext
     {
         ConfigurarOrdenProduccion(modelBuilder);
         ConfigurarPaquete(modelBuilder);
+        ConfigurarOutboxMessage(modelBuilder);
     }
 
     private static void ConfigurarOrdenProduccion(ModelBuilder modelBuilder)
@@ -125,6 +128,20 @@ public class NurTricenterDbContext : DbContext, INurTricenterDbContext
             entity.Navigation(p => p.Porciones)
                 .HasField("_porciones")
                 .UsePropertyAccessMode(PropertyAccessMode.Field);
+        });
+    }
+
+    private static void ConfigurarOutboxMessage(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<OutboxMessage>(entity =>
+        {
+            entity.ToTable("OutboxMessages");
+
+            entity.HasKey(m => m.Id);
+            entity.Property(m => m.Tipo).IsRequired().HasMaxLength(200);
+            entity.Property(m => m.RoutingKey).IsRequired().HasMaxLength(200);
+            entity.Property(m => m.Payload).IsRequired().HasMaxLength(4000);
+            entity.Property(m => m.OcurridoEn).IsRequired();
         });
     }
 }

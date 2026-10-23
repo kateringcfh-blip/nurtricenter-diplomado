@@ -3,6 +3,7 @@ using MsPacientesEvaluacion.Application.Interfaces;
 using MsPacientesEvaluacion.Domain.Aggregates;
 using MsPacientesEvaluacion.Domain.Enums;
 using MsPacientesEvaluacion.Domain.ValueObjects;
+using MsPacientesEvaluacion.Infrastructure.Outbox;
 
 namespace MsPacientesEvaluacion.Infrastructure.Persistence;
 
@@ -11,12 +12,14 @@ public class PacientesDbContext : DbContext, IPacientesDbContext
     public PacientesDbContext(DbContextOptions<PacientesDbContext> options) : base(options) { }
 
     public DbSet<Paciente> Pacientes => Set<Paciente>();
+    public DbSet<OutboxMessage> OutboxMessages => Set<OutboxMessage>();
 
     IQueryable<Paciente> IPacientesDbContext.Pacientes => Pacientes;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         ConfigurarPaciente(modelBuilder);
+        ConfigurarOutboxMessage(modelBuilder);
     }
 
     private static void ConfigurarPaciente(ModelBuilder modelBuilder)
@@ -114,6 +117,20 @@ public class PacientesDbContext : DbContext, IPacientesDbContext
             entity.Navigation(p => p.Evaluaciones)
                 .HasField("_evaluaciones")
                 .UsePropertyAccessMode(PropertyAccessMode.Field);
+        });
+    }
+
+    private static void ConfigurarOutboxMessage(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<OutboxMessage>(entity =>
+        {
+            entity.ToTable("OutboxMessages");
+
+            entity.HasKey(m => m.Id);
+            entity.Property(m => m.Tipo).IsRequired().HasMaxLength(200);
+            entity.Property(m => m.RoutingKey).IsRequired().HasMaxLength(200);
+            entity.Property(m => m.Payload).IsRequired().HasMaxLength(4000);
+            entity.Property(m => m.OcurridoEn).IsRequired();
         });
     }
 }

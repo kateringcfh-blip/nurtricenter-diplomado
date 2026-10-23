@@ -10,16 +10,16 @@ public class CancelarOrdenCommandHandler : IRequestHandler<CancelarOrdenCommand,
 {
     private readonly IOrdenRepository _repository;
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IEventPublisher _eventPublisher;
+    private readonly IIntegrationEventOutbox _outbox;
 
     public CancelarOrdenCommandHandler(
         IOrdenRepository repository,
         IUnitOfWork unitOfWork,
-        IEventPublisher eventPublisher)
+        IIntegrationEventOutbox outbox)
     {
         _repository = repository;
         _unitOfWork = unitOfWork;
-        _eventPublisher = eventPublisher;
+        _outbox = outbox;
     }
 
     public async Task<Unit> Handle(CancelarOrdenCommand request, CancellationToken cancellationToken)
@@ -29,10 +29,10 @@ public class CancelarOrdenCommandHandler : IRequestHandler<CancelarOrdenCommand,
 
         orden.Cancelar(request.Motivo);
 
-        await _unitOfWork.GuardarCambios(cancellationToken);
-
-        // Publicar eventos de integración después de confirmar la persistencia,
-        // para no notificar a otros microservicios si el guardado falla.
+        // Patrón Transactional Outbox: el evento de integración se encola en el mismo
+        // DbContext que el aggregate, así que se persiste atómicamente junto con la
+        // orden en el GuardarCambios() de abajo. La publicación real a RabbitMQ la hace,
+        // por separado, el OutboxPublisherBackgroundService.
         foreach (var evento in orden.EventosOcurridos)
         {
             if (evento is OrdenCancelada ordenCancelada)
@@ -42,10 +42,12 @@ public class CancelarOrdenCommandHandler : IRequestHandler<CancelarOrdenCommand,
                     ordenCancelada.Motivo,
                     ordenCancelada.FechaCancelacion);
 
-                await _eventPublisher.PublishAsync("orden.cancelada", integrationEvent, cancellationToken);
+                _outbox.Enqueuear("orden.cancelada", integrationEvent);
             }
         }
         orden.LimpiarEventos();
+
+        await _unitOfWork.GuardarCambios(cancellationToken);
 
         return Unit.Value;
     }

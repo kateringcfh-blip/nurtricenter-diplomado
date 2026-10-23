@@ -20,9 +20,9 @@ public class RegistrarPacienteCommandHandlerTests
         var repoMock = new Mock<IPacienteRepository>();
         var uowMock = new Mock<IUnitOfWork>();
         uowMock.Setup(u => u.GuardarCambios(It.IsAny<CancellationToken>())).ReturnsAsync(1);
-        var eventPublisherMock = new Mock<IEventPublisher>();
+        var outboxMock = new Mock<IIntegrationEventOutbox>();
 
-        var handler = new RegistrarPacienteCommandHandler(repoMock.Object, uowMock.Object, eventPublisherMock.Object);
+        var handler = new RegistrarPacienteCommandHandler(repoMock.Object, uowMock.Object, outboxMock.Object);
 
         // Act
         await handler.Handle(CrearCommand(), CancellationToken.None);
@@ -38,9 +38,9 @@ public class RegistrarPacienteCommandHandlerTests
         var repoMock = new Mock<IPacienteRepository>();
         var uowMock = new Mock<IUnitOfWork>();
         uowMock.Setup(u => u.GuardarCambios(It.IsAny<CancellationToken>())).ReturnsAsync(1);
-        var eventPublisherMock = new Mock<IEventPublisher>();
+        var outboxMock = new Mock<IIntegrationEventOutbox>();
 
-        var handler = new RegistrarPacienteCommandHandler(repoMock.Object, uowMock.Object, eventPublisherMock.Object);
+        var handler = new RegistrarPacienteCommandHandler(repoMock.Object, uowMock.Object, outboxMock.Object);
 
         // Act
         await handler.Handle(CrearCommand(), CancellationToken.None);
@@ -56,9 +56,9 @@ public class RegistrarPacienteCommandHandlerTests
         var repoMock = new Mock<IPacienteRepository>();
         var uowMock = new Mock<IUnitOfWork>();
         uowMock.Setup(u => u.GuardarCambios(It.IsAny<CancellationToken>())).ReturnsAsync(1);
-        var eventPublisherMock = new Mock<IEventPublisher>();
+        var outboxMock = new Mock<IIntegrationEventOutbox>();
 
-        var handler = new RegistrarPacienteCommandHandler(repoMock.Object, uowMock.Object, eventPublisherMock.Object);
+        var handler = new RegistrarPacienteCommandHandler(repoMock.Object, uowMock.Object, outboxMock.Object);
 
         // Act
         var resultado = await handler.Handle(CrearCommand(), CancellationToken.None);
@@ -68,22 +68,23 @@ public class RegistrarPacienteCommandHandlerTests
     }
 
     [Fact]
-    public async Task Handle_CommandValido_PublicaEventoPacienteRegistrado()
+    public async Task Handle_CommandValido_EncolaEventoPacienteRegistradoEnElOutbox()
     {
         // Arrange
         var repoMock = new Mock<IPacienteRepository>();
         var uowMock = new Mock<IUnitOfWork>();
         uowMock.Setup(u => u.GuardarCambios(It.IsAny<CancellationToken>())).ReturnsAsync(1);
-        var eventPublisherMock = new Mock<IEventPublisher>();
+        var outboxMock = new Mock<IIntegrationEventOutbox>();
 
-        var handler = new RegistrarPacienteCommandHandler(repoMock.Object, uowMock.Object, eventPublisherMock.Object);
+        var handler = new RegistrarPacienteCommandHandler(repoMock.Object, uowMock.Object, outboxMock.Object);
 
         // Act
         await handler.Handle(CrearCommand(), CancellationToken.None);
 
-        // Assert: se publicó exactamente un evento de integración con la routing key esperada
-        eventPublisherMock.Verify(
-            p => p.PublishAsync("paciente.registrado", It.IsAny<object>(), It.IsAny<CancellationToken>()),
+        // Assert: el evento se encoló en el outbox (patrón Transactional Outbox) con la
+        // routing key esperada, ANTES de confirmar la transacción.
+        outboxMock.Verify(
+            o => o.Enqueuear("paciente.registrado", It.IsAny<object>()),
             Times.Once);
     }
 }

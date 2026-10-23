@@ -46,7 +46,12 @@ public sealed class RabbitMqEventPublisher : IEventPublisher, IDisposable
     public Task PublishAsync(string routingKey, object integrationEvent, CancellationToken cancellationToken = default)
     {
         var json = JsonSerializer.Serialize(integrationEvent, integrationEvent.GetType());
-        var body = Encoding.UTF8.GetBytes(json);
+        return PublishRawAsync(routingKey, json, cancellationToken);
+    }
+
+    public Task PublishRawAsync(string routingKey, string jsonPayload, CancellationToken cancellationToken = default)
+    {
+        var body = Encoding.UTF8.GetBytes(jsonPayload);
 
         lock (_publishLock)
         {
@@ -98,7 +103,16 @@ public sealed class RabbitMqEventPublisher : IEventPublisher, IDisposable
         catch (Exception ex)
         {
             // Solo puede fallar durante el cierre ordenado; no debe tumbar el shutdown de la app.
-            _logger.LogWarning(ex, "Error no crítico al cerrar la conexión de RabbitMQ.");
+            // El propio logger también puede estar cerrándose en ese momento (p. ej. en tests de
+            // integración con WebApplicationFactory), así que el log en sí va protegido aparte.
+            try
+            {
+                _logger.LogWarning(ex, "Error no crítico al cerrar la conexión de RabbitMQ.");
+            }
+            catch
+            {
+                // El logger puede estar ya liberado durante el apagado del host; no hay nada más que hacer.
+            }
         }
     }
 }

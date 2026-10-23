@@ -11,16 +11,16 @@ public class RegistrarPacienteCommandHandler : IRequestHandler<RegistrarPaciente
 {
     private readonly IPacienteRepository _repository;
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IEventPublisher _eventPublisher;
+    private readonly IIntegrationEventOutbox _outbox;
 
     public RegistrarPacienteCommandHandler(
         IPacienteRepository repository,
         IUnitOfWork unitOfWork,
-        IEventPublisher eventPublisher)
+        IIntegrationEventOutbox outbox)
     {
         _repository = repository;
         _unitOfWork = unitOfWork;
-        _eventPublisher = eventPublisher;
+        _outbox = outbox;
     }
 
     public async Task<Guid> Handle(RegistrarPacienteCommand request, CancellationToken cancellationToken)
@@ -34,10 +34,14 @@ public class RegistrarPacienteCommandHandler : IRequestHandler<RegistrarPaciente
             request.NutricionistaId);
 
         await _repository.Agregar(paciente);
-        await _unitOfWork.GuardarCambios(cancellationToken);
 
-        // Publicar eventos de integración después de confirmar la persistencia,
-        // para no notificar a otros microservicios si el guardado falla.
+        // Patrón Transactional Outbox: el evento de integración se encola en el mismo
+        // DbContext que el aggregate, así que se persiste atómicamente junto con el
+        // paciente en el GuardarCambios() de abajo. Si el guardado falla, el evento
+        // tampoco se encola (no hay publicación "fantasma"); si el guardado tiene éxito,
+        // el evento queda garantizado en la tabla OutboxMessages aunque el proceso se
+        // caiga antes de llegar a publicarlo a RabbitMQ (lo hace, aparte, el
+        // OutboxPublisherBackgroundService).
         foreach (var evento in paciente.EventosOcurridos)
         {
             if (evento is PacienteRegistrado pacienteRegistrado)
@@ -47,10 +51,12 @@ public class RegistrarPacienteCommandHandler : IRequestHandler<RegistrarPaciente
                     pacienteRegistrado.Nombre,
                     pacienteRegistrado.FechaRegistro);
 
-                await _eventPublisher.PublishAsync("paciente.registrado", integrationEvent, cancellationToken);
+                _outbox.Enqueuear("paciente.registrado", integrationEvent);
             }
         }
         paciente.LimpiarEventos();
+
+        await _unitOfWork.GuardarCambios(cancellationToken);
 
         return paciente.Id.Valor;
     }

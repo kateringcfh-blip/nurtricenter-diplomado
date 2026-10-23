@@ -133,9 +133,24 @@ public sealed class PacienteRegistradoConsumerService : BackgroundService
         catch (Exception ex)
         {
             // Solo puede fallar durante el cierre ordenado; no debe tumbar el shutdown de la app.
-            _logger.LogWarning(ex, "Error no crítico al cerrar la conexión de RabbitMQ.");
+            // El propio logger también puede estar cerrándose en ese momento (p. ej. en tests de
+            // integración con WebApplicationFactory), así que el log en sí va protegido aparte.
+            TryLogWarning(ex, "Error no crítico al cerrar la conexión de RabbitMQ.");
         }
 
         await base.StopAsync(cancellationToken);
+    }
+
+    private void TryLogWarning(Exception ex, string mensaje)
+    {
+        try
+        {
+            _logger.LogWarning(ex, mensaje);
+        }
+        catch
+        {
+            // El logger (p. ej. el proveedor EventLog en Windows) puede estar ya liberado
+            // durante el apagado del host; no hay nada más que hacer con esto.
+        }
     }
 }

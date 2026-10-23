@@ -21,10 +21,10 @@ public class CancelarOrdenCommandHandlerTests
 
         var uowMock = new Mock<IUnitOfWork>();
         uowMock.Setup(u => u.GuardarCambios(It.IsAny<CancellationToken>())).ReturnsAsync(1);
-        var eventPublisherMock = new Mock<IEventPublisher>();
+        var outboxMock = new Mock<IIntegrationEventOutbox>();
 
         var command = new CancelarOrdenCommand(Guid.NewGuid(), "Motivo de cancelación");
-        var handler = new CancelarOrdenCommandHandler(repoMock.Object, uowMock.Object, eventPublisherMock.Object);
+        var handler = new CancelarOrdenCommandHandler(repoMock.Object, uowMock.Object, outboxMock.Object);
 
         // Act
         await handler.Handle(command, CancellationToken.None);
@@ -41,17 +41,17 @@ public class CancelarOrdenCommandHandlerTests
         repoMock.Setup(r => r.ObtenerPorId(It.IsAny<OrdenId>())).ReturnsAsync((OrdenProduccion?)null);
 
         var uowMock = new Mock<IUnitOfWork>();
-        var eventPublisherMock = new Mock<IEventPublisher>();
+        var outboxMock = new Mock<IIntegrationEventOutbox>();
 
         var command = new CancelarOrdenCommand(Guid.NewGuid(), "Motivo");
-        var handler = new CancelarOrdenCommandHandler(repoMock.Object, uowMock.Object, eventPublisherMock.Object);
+        var handler = new CancelarOrdenCommandHandler(repoMock.Object, uowMock.Object, outboxMock.Object);
 
         // Act & Assert
         await Assert.ThrowsAsync<InvalidOperationException>(() => handler.Handle(command, CancellationToken.None));
     }
 
     [Fact]
-    public async Task Handle_OrdenExiste_PublicaEventoOrdenCancelada()
+    public async Task Handle_OrdenExiste_EncolaEventoOrdenCanceladaEnElOutbox()
     {
         // Arrange
         var orden = CrearOrden();
@@ -60,17 +60,18 @@ public class CancelarOrdenCommandHandlerTests
 
         var uowMock = new Mock<IUnitOfWork>();
         uowMock.Setup(u => u.GuardarCambios(It.IsAny<CancellationToken>())).ReturnsAsync(1);
-        var eventPublisherMock = new Mock<IEventPublisher>();
+        var outboxMock = new Mock<IIntegrationEventOutbox>();
 
         var command = new CancelarOrdenCommand(Guid.NewGuid(), "Motivo de cancelación");
-        var handler = new CancelarOrdenCommandHandler(repoMock.Object, uowMock.Object, eventPublisherMock.Object);
+        var handler = new CancelarOrdenCommandHandler(repoMock.Object, uowMock.Object, outboxMock.Object);
 
         // Act
         await handler.Handle(command, CancellationToken.None);
 
-        // Assert: se publicó exactamente un evento de integración con la routing key esperada
-        eventPublisherMock.Verify(
-            p => p.PublishAsync("orden.cancelada", It.IsAny<object>(), It.IsAny<CancellationToken>()),
+        // Assert: el evento se encoló en el outbox (patrón Transactional Outbox) con la
+        // routing key esperada, ANTES de confirmar la transacción.
+        outboxMock.Verify(
+            o => o.Enqueuear("orden.cancelada", It.IsAny<object>()),
             Times.Once);
     }
 }

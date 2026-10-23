@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MsPacientesEvaluacion.Application.Interfaces;
 using MsPacientesEvaluacion.Infrastructure.Messaging;
+using MsPacientesEvaluacion.Infrastructure.Outbox;
 using MsPacientesEvaluacion.Infrastructure.Persistence;
 using MsPacientesEvaluacion.Infrastructure.Persistence.Repositories;
 
@@ -26,6 +27,13 @@ public static class DependencyInjection
         services.AddSingleton<IEventPublisher, RabbitMqEventPublisher>();
         services.AddSingleton<IReceivedIntegrationEventsStore, InMemoryReceivedIntegrationEventsStore>();
         services.AddHostedService<OrdenCanceladaConsumerService>();
+
+        // Patrón Transactional Outbox: el handler escribe en OutboxMessages dentro de la
+        // misma transacción que el aggregate (EfOutboxWriter); este BackgroundService la
+        // publica a RabbitMQ por separado, garantizando entrega "al menos una vez" aunque
+        // el proceso se caiga justo después de guardar en la base.
+        services.AddScoped<IIntegrationEventOutbox, EfOutboxWriter>();
+        services.AddHostedService<OutboxPublisherBackgroundService>();
 
         return services;
     }
