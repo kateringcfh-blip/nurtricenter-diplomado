@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MsProduccionAlimentos.Api.Seguridad;
+using MsProduccionAlimentos.Api.ServiceDiscovery;
 using MsProduccionAlimentos.Application.Commands.GenerarOrden;
 using MsProduccionAlimentos.Infrastructure;
 using MsProduccionAlimentos.Infrastructure.Persistence;
@@ -46,6 +47,11 @@ builder.Services
     });
 
 builder.Services.AddAuthorization();
+
+// --- Service Discovery: Consul -----------------------------------------
+// Esta instancia se anuncia sola en Consul al arrancar (nombre, dirección, puerto) y se
+// da de baja al apagarse. Consul además le hace health check a GET /health cada 10s.
+builder.Services.RegisterServiceToServiceDiscovery(builder.Configuration);
 
 builder.Services.AddSwaggerGen(options =>
 {
@@ -102,6 +108,11 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Lo consulta Consul (Service Discovery) para saber si esta instancia sigue viva.
+// Queda público a propósito: Consul le pega directo, sin token.
+app.MapGet("/health", () => Results.Ok(new { estado = "Healthy" }));
+
 app.MapControllers();
 
 app.Run();
