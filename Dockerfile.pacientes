@@ -1,0 +1,35 @@
+# ── ETAPA 1: Builder (compila el código) ──
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
+WORKDIR /src
+
+# Copiar solo los archivos de proyecto primero (mejor cache de capas)
+COPY NurTricenter.sln .
+COPY MsPacientesEvaluacion.Domain/MsPacientesEvaluacion.Domain.csproj MsPacientesEvaluacion.Domain/
+COPY MsPacientesEvaluacion.Application/MsPacientesEvaluacion.Application.csproj MsPacientesEvaluacion.Application/
+COPY MsPacientesEvaluacion.Infrastructure/MsPacientesEvaluacion.Infrastructure.csproj MsPacientesEvaluacion.Infrastructure/
+COPY MsPacientesEvaluacion.Api/MsPacientesEvaluacion.Api.csproj MsPacientesEvaluacion.Api/
+
+# Restaurar dependencias (cacheado si no cambian los .csproj)
+RUN dotnet restore "MsPacientesEvaluacion.Api/MsPacientesEvaluacion.Api.csproj"
+
+# Copiar el resto del código fuente
+COPY MsPacientesEvaluacion.Domain/ MsPacientesEvaluacion.Domain/
+COPY MsPacientesEvaluacion.Application/ MsPacientesEvaluacion.Application/
+COPY MsPacientesEvaluacion.Infrastructure/ MsPacientesEvaluacion.Infrastructure/
+COPY MsPacientesEvaluacion.Api/ MsPacientesEvaluacion.Api/
+
+# Compilar y publicar en modo Release
+RUN dotnet publish "MsPacientesEvaluacion.Api/MsPacientesEvaluacion.Api.csproj" \
+    -c Release \
+    --no-restore \
+    -o /app/publish
+
+# ── ETAPA 2: Runtime (solo lo necesario para ejecutar) ──
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+
+# Copiar SOLO el compilado desde la etapa builder
+COPY --from=builder /app/publish .
+
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "MsPacientesEvaluacion.Api.dll"]

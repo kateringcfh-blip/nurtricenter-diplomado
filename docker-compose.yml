@@ -50,17 +50,52 @@ services:
       retries: 10
       start_period: 10s
 
-  api:
+  pacientes:
+    build:
+      context: .
+      dockerfile: Dockerfile.pacientes
+    image: kcristalfh/ms-pacientes-evaluacion:latest
+    container_name: nurtricenter_pacientes
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__PacientesConnection=Server=db;Database=NurTricenterPacientes;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True
+      - RabbitMq__HostName=rabbitmq
+      # Dentro de la red de Docker Compose todos los contenedores se resuelven por su
+      # nombre de servicio, así que Consul puede alcanzar a este contenedor directamente
+      # como "pacientes" (no hace falta el truco de host.docker.internal, que solo aplica
+      # cuando el servicio corre fuera de Docker con `dotnet run`).
+      - ServiceDiscovery__ServiceDiscoveryAddress=http://consul:8500
+      - ServiceDiscovery__Host=http://pacientes
+      - ServiceDiscovery__Port=8080
+      - ServiceDiscovery__ServiceId=pacientes
+    ports:
+      - "8081:8080"
+    networks:
+      - nurtricenter_network
+    depends_on:
+      db:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+
+  produccion:
     build:
       context: .
       dockerfile: Dockerfile.optimizada
     image: kcristalfh/ms-produccion-alimentos:optimizada
-    container_name: nurtricenter_api
+    container_name: nurtricenter_produccion
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
       - ConnectionStrings__DefaultConnection=Server=db;Database=NurTricenter;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True
       - RabbitMq__HostName=rabbitmq
+      - ServiceDiscovery__ServiceDiscoveryAddress=http://consul:8500
+      - ServiceDiscovery__Host=http://produccion
+      - ServiceDiscovery__Port=8080
+      - ServiceDiscovery__ServiceId=produccion
     ports:
       - "8082:8080"
     networks:
@@ -70,6 +105,30 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+      consul:
+        condition: service_healthy
+
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile.gateway
+    image: kcristalfh/nurtricenter-gateway:latest
+    container_name: nurtricenter_gateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ServiceDiscovery__ConsulAddress=http://consul:8500
+    ports:
+      - "5000:8080"
+    networks:
+      - nurtricenter_network
+    depends_on:
+      consul:
+        condition: service_healthy
+      pacientes:
+        condition: service_started
+      produccion:
+        condition: service_started
 
 networks:
   nurtricenter_network:
