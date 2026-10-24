@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MsPacientesEvaluacion.Application.Commands.AsignarNutricionista;
 using MsPacientesEvaluacion.Application.Commands.DesactivarPaciente;
@@ -12,6 +13,7 @@ namespace MsPacientesEvaluacion.Api.Controllers;
 
 [ApiController]
 [Route("api/pacientes")]
+[Authorize]
 public class PacientesController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -84,6 +86,7 @@ public class PacientesController : ControllerBase
     }
 
     [HttpPost("{id:guid}/desactivar")]
+    [Authorize(Roles = "Administrador")]
     public async Task<IActionResult> DesactivarPaciente(Guid id)
     {
         await _mediator.Send(new DesactivarPacienteCommand(id));

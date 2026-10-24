@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MsPacientesEvaluacion.Application.Interfaces;
 
@@ -6,9 +7,12 @@ namespace MsPacientesEvaluacion.Api.Controllers;
 /// <summary>
 /// Endpoint de apoyo para la demo/defensa: permite verificar, vía HTTP, los últimos
 /// eventos de integración recibidos por RabbitMQ sin depender únicamente de los logs.
+/// Se deja sin autenticación a propósito (solo lectura, sin datos sensibles) para no
+/// complicar la demostración en vivo.
 /// </summary>
 [ApiController]
 [Route("api/integracion")]
+[AllowAnonymous]
 public class IntegracionController : ControllerBase
 {
     private readonly IReceivedIntegrationEventsStore _store;

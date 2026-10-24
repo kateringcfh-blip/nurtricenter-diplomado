@@ -1,4 +1,5 @@
 using System.Net;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
@@ -22,8 +23,28 @@ public class OrdenesIntegrationTests : IClassFixture<OrdenesApiFactory>, IAsyncL
         _client = factory.CreateClient();
     }
 
-    public async Task InitializeAsync() => await _factory.ResetDatabaseAsync();
+    public async Task InitializeAsync()
+    {
+        await _factory.ResetDatabaseAsync();
+        await AutenticarClienteAsync();
+    }
+
     public Task DisposeAsync() => Task.CompletedTask;
+
+    // -----------------------------------------------------------------------
+    // Helper: autentica al cliente de pruebas contra /api/auth/login y deja
+    // el token JWT como header por defecto para el resto de las peticiones.
+    // Los endpoints de negocio ahora requieren autenticación (ver AuthController).
+    // -----------------------------------------------------------------------
+    private async Task AutenticarClienteAsync()
+    {
+        var loginRequest = new { usuario = "admin", password = "Admin123!" };
+        var response = await _client.PostAsJsonAsync("/api/auth/login", loginRequest);
+        response.EnsureSuccessStatusCode();
+
+        var body = await response.Content.ReadFromJsonAsync<LoginResponseDto>(JsonOptions);
+        _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", body!.Token);
+    }
 
     // -----------------------------------------------------------------------
     // Test 1 — Flujo correcto: GenerarOrdenDesdePedidos con dos pacientes
@@ -161,3 +182,6 @@ public class OrdenesIntegrationTests : IClassFixture<OrdenesApiFactory>, IAsyncL
 // DTOs de respuesta para deserializar
 file record GenerarOrdenDesdePedidosResultDto(Guid OrdenId, List<Guid> PaqueteIds);
 file record CreatedIdDto(Guid Id);
+
+// DTO para deserializar la respuesta de /api/auth/login
+file record LoginResponseDto(string Token);

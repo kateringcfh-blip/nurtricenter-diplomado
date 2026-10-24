@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MsProduccionAlimentos.Application.Commands.AgregarPorcion;
 using MsProduccionAlimentos.Application.Commands.ArmarPaquete;
@@ -10,6 +11,7 @@ namespace MsProduccionAlimentos.Api.Controllers;
 
 [ApiController]
 [Route("api/paquetes")]
+[Authorize]
 public class PaquetesController : ControllerBase
 {
     private readonly IMediator _mediator;

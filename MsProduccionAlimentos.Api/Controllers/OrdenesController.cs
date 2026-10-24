@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MsProduccionAlimentos.Application.Commands.CancelarOrden;
 using MsProduccionAlimentos.Application.Commands.GenerarOrden;
@@ -11,6 +12,7 @@ namespace MsProduccionAlimentos.Api.Controllers;
 
 [ApiController]
 [Route("api/ordenes")]
+[Authorize]
 public class OrdenesController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -19,7 +21,7 @@ public class OrdenesController : ControllerBase
     {
         _mediator = mediator;
     }
-    
+
     [HttpGet]
     public async Task<IActionResult> Listar()
     {
@@ -32,7 +34,7 @@ public class OrdenesController : ControllerBase
     {
         var id = await _mediator.Send(command);
         return CreatedAtAction(nameof(ObtenerPorId), new { id }, new { id });
-    }   
+    }
 
     [HttpGet("{id:guid}")]
     public async Task<IActionResult> ObtenerPorId(Guid id)
@@ -49,6 +51,7 @@ public class OrdenesController : ControllerBase
     }
 
     [HttpPost("{id:guid}/cancelar")]
+    [Authorize(Roles = "Administrador,Operador")]
     public async Task<IActionResult> Cancelar(Guid id, [FromBody] CancelarOrdenRequest request)
     {
         await _mediator.Send(new CancelarOrdenCommand(id, request.Motivo));
